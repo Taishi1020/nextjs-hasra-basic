@@ -21,7 +21,7 @@ export const Layout: VFC<Props> = ({children, title = "Welcome to NextJs"}) => {
                             <Link href="/" data-testid="home-nav" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                                 Home
                             </Link>
-                            <Link href="/" data-testid="makevar-nav" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
+                            <Link href="/local-state-a" data-testid="makevar-nav" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
                                 makeVar
                             </Link>
                             <Link href="/hasura-main" data-testid="fetchpolicy-nav" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded">
