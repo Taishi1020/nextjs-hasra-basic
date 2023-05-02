@@ -35,7 +35,6 @@ export const GET_USERBY_ID = gql `
  }
 `
 
-
 // データ作成Z
 export const CREATE_USER = gql `
   mutation CreateUser($name: String!) {
