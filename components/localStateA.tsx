@@ -1,18 +1,19 @@
 // 入力フォームやタスクを追加するファイル
 
-import { makeVar, useQuery, useReactiveVar } from "@apollo/client";
+import {  useQuery, useReactiveVar } from "@apollo/client";
 import { ChangeEvent, FormEvent, VFC, useState } from "react";
 import { todoVer } from "../cache";
 import Link from "next/link";
+import { GetUsersQuery } from "../types/generated/graphql";
+import { GET_USERS } from "../queries/queries";
 
 
 
 export const LocalStateA: VFC = () => {
-     const [input, setInput] = useState('');
-      
-     
+     const [input, setInput] = useState('');     
      const todos = useReactiveVar(todoVer)
-{
+
+     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         todoVer([...todoVer(), {title: input}])
         setInput('')

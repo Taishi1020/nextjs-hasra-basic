@@ -25,7 +25,7 @@ export const GET_USERSIDS = gql `
   }
  }
 `
-export const GET_USERBY_ID = gql `
+export const GET_USER_BY_ID = gql `
   query GetUserById($id: uuid!) {
     users_by_pk(id: $id) {
     id
@@ -35,7 +35,7 @@ export const GET_USERBY_ID = gql `
  }
 `
 
-// データ作成Z
+// データ作成
 export const CREATE_USER = gql `
   mutation CreateUser($name: String!) {
     insert_users_one(object: {name: $name}) {
